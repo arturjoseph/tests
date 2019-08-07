@@ -1,16 +1,11 @@
-# SeleniumWithCucumber
-This is an sample project to demonstrate how to work with Selenium and cucumber for Java
+# Para que serve?
+Esse repositório destina-se a agrupar a trilha de estudos realizados nas mais diversas plataforma de ensino on-line ou presencial.
 
-## More Information
-The complete code base development video is available in ExecuteAutomation YouTube channel 
-https://www.youtube.com/playlist?list=PL6tu16kXT9Pqr70SZlwcmTSAfOw_0Qj3R
+## YouTube
+https://www.youtube.com
 
+## Udemy
+https://www.udemy.com
 
-## Cucumber BDD video Series (YouTube)
-https://www.youtube.com/playlist?list=PL6tu16kXT9PpteusHGISu_lHcV6MbBtA6
-
-## Cucumber BDD video Series (Udemy)
-https://www.udemy.com/cucumber-with-selenium/
-
-### For more articles and videos
-Visit http://www.executeautomation.com
+## Alura
+https://www.alura.com.br

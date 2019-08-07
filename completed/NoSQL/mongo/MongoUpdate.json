@@ -1,0 +1,52 @@
+db.alunos.update(
+	{"curso.nome" : "Sistema de informação"},
+		{
+			$set : {
+				"curso.nome" : "Sistemas de informação"
+			}
+		}
+)
+
+db.alunos.update(
+	{"curso.nome" : "Sistemas de Informação"},
+		{
+			$set : {
+				"curso.nome" : "Sistemas De Informação"
+			}
+		},
+		{
+			multi: true
+		}
+)
+
+db.alunos.update(
+	{ "_id" : ObjectId("596f473f172dc9cbcf01f553")},
+		{
+			$push : {
+				"notas" : 8.5
+			}
+		}
+)
+
+db.alunos.update(
+	{ "_id" : ObjectId("596f473f172dc9cbcf01f553")},
+		{
+			$push : {
+				"notas" : {$each : [8.5,3]}
+			}
+		}
+)
+
+db.alunos.update(
+	{ "_id" : ObjectId("596e0ee93f433b0dbc36c9fd")},
+		{
+			$set : {
+				"localizacao" : {
+					"endereco" : "Rua vergueiro, 3185",
+					"cidade" : "São Paulo",
+					"coordinates" : [-23.588213, -46.632356],
+					"type" : "Point" 
+				}
+			}
+		}
+)

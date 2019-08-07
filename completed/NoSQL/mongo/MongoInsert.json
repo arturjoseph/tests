@@ -1,0 +1,35 @@
+db.alunos.insert(
+{	
+	"nome" : "Fernando",
+	"data_nascimento" : new Date(1994,03,26),
+	"notas" : [10,4.5,7],
+	"curso" : {
+		"nome" : "Sistema de informação"
+	}
+	
+}
+)
+
+db.alunos.insert(
+{	
+	"nome" : "Andre",
+	"data_nascimento" : new Date(1991,01,25),
+	"notas" : [7,5,9,4.5],
+	"curso" : {
+		"nome" : "Matematica"
+	}
+	
+}
+)
+
+db.alunos.insert(
+{	
+	"nome" : "Lucia",
+	"data_nascimento" : new Date(1984,07,17),
+	"notas" : [8,9.5,10],
+	"curso" : {
+		"nome" : "Matematica"
+	}
+	
+}
+)

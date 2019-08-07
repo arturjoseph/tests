@@ -1,0 +1,23 @@
+//Maior que
+db.alunos.find({
+    "notas" : {$gt : 5}
+}).pretty()
+//Apenas um
+db.alunos.findOne({
+    "notas" : {$gt : 5}
+}).pretty()
+
+//Ordenar A-Z
+db.alunos.find({
+    "notas" : {$gt : 5}
+}).sort({"nome" : 1})
+
+//Ordenar Z-A
+db.alunos.find({
+    "notas" : {$gt : 5}
+}).sort({"nome" : -1})
+
+//Ordenar Z-A com limit
+db.alunos.find({
+    "notas" : {$gt : 5}
+}).sort({"nome" : -1}).limit(3)

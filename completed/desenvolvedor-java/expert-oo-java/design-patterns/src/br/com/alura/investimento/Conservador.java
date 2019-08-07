@@ -1,0 +1,7 @@
+package br.com.alura.investimento;
+
+public class Conservador implements Investimento {
+	public double calcula(Conta conta) {
+		return conta.getSaldo() * 0.008;
+	}
+}

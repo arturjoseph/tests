@@ -1,6 +1,7 @@
 package contact.arturneto.courses.springboot.model;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.Entity;
@@ -13,11 +14,11 @@ import java.util.Objects;
 import static java.util.Arrays.asList;
 
 @Entity
-@Getter@Setter
+@Getter@Setter@NoArgsConstructor
 public class Student extends AbstractEntity{
-
-    @NotEmpty
+    @NotEmpty(message = "O campo name do estudante é obrigatório!")
     private String name;
+    @NotEmpty(message = "O campo email do estudante é obrigatório!")
     @Email
     private String email;
 }

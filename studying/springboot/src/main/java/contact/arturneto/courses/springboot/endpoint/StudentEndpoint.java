@@ -5,6 +5,8 @@ import contact.arturneto.courses.springboot.error.ResourceNotFoundException;
 import contact.arturneto.courses.springboot.model.Student;
 import contact.arturneto.courses.springboot.repository.StudentRepository;
 import contact.arturneto.courses.springboot.util.DateUtil;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -24,13 +26,12 @@ public class StudentEndpoint {
     }
 
     @GetMapping
-    public ResponseEntity<Iterable<Student>> getAll() {
-        return ResponseEntity.ok().body(studentDAO.findAll());
+    public ResponseEntity<Page<Student>> getAll(Pageable pageable) {
+        return ResponseEntity.ok().body(studentDAO.findAll(pageable));
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<Student> getById(@PathVariable("id") Long id) {
-        //verifyStudentExists(id);
         return ResponseEntity.ok().body(studentDAO.findById(id).orElseThrow(() -> new ResourceNotFoundException("Student not found for ID: " + id)));
     }
 

@@ -1,12 +1,15 @@
 package contact.arturneto.courses.springboot.endpoint;
 
 import contact.arturneto.courses.springboot.error.CustomErrorType;
+import contact.arturneto.courses.springboot.error.ResourceNotFoundException;
 import contact.arturneto.courses.springboot.model.Student;
+import contact.arturneto.courses.springboot.repository.StudentRepository;
 import contact.arturneto.courses.springboot.util.DateUtil;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.net.URI;
 import java.util.List;
 
@@ -14,42 +17,50 @@ import java.util.List;
 @RestController
 public class StudentEndpoint {
 
-    private final DateUtil dateUtil;
+    private final StudentRepository studentDAO;
 
-    public StudentEndpoint(DateUtil dateUtil) {
-        this.dateUtil = dateUtil;
+    public StudentEndpoint(StudentRepository studentDAO) {
+        this.studentDAO = studentDAO;
     }
 
     @GetMapping
-    public ResponseEntity<List<Student>> getAll() {
-        return ResponseEntity.ok().body(Student.studentList);
+    public ResponseEntity<Iterable<Student>> getAll() {
+        return ResponseEntity.ok().body(studentDAO.findAll());
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Student> getById(@PathVariable("id") int id) {
-        Student student = Student.studentList.stream()
-                .filter(s -> s.getId() == id).findFirst().orElse(new Student());
-        if (student.getId() <= 0)
-            return new ResponseEntity(new CustomErrorType("Student not found!"), HttpStatus.NOT_FOUND);
-        return ResponseEntity.ok().body(student);
+    public ResponseEntity<Student> getById(@PathVariable("id") Long id) {
+        //verifyStudentExists(id);
+        return ResponseEntity.ok().body(studentDAO.findById(id).orElseThrow(() -> new ResourceNotFoundException("Student not found for ID: " + id)));
+    }
+
+    @GetMapping("findByName/{name}")
+    public ResponseEntity<List<Student>> getByname(@PathVariable("name") String name) {
+        return ResponseEntity.ok().body(studentDAO.findByNameIgnoreCaseContaining(name));
     }
 
     @PostMapping
-    public ResponseEntity<Student> save(@RequestBody Student student) {
-        Student.studentList.add(student);
+    public ResponseEntity<Student> save(@Valid @RequestBody Student student) {
+        studentDAO.save(student);
         return ResponseEntity.created(URI.create("http://localhost:8080/students/" + student.getId())).body(student);
     }
 
     @PutMapping
     public ResponseEntity<Student> update(@RequestBody Student student) {
-        Student.studentList.add(student);
-        return ResponseEntity.accepted().body(student);
+        verifyStudentExists(student.getId());
+        studentDAO.save(student);
+        return ResponseEntity.accepted().build();
     }
 
-    @DeleteMapping
-    public ResponseEntity<Student> delete(@RequestBody Student student) {
-        Student.studentList.remove(student);
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Student> delete(@PathVariable("id") Long id) {
+        verifyStudentExists(id);
+        studentDAO.deleteById(id);
         return ResponseEntity.noContent().build();
+    }
+
+    private void verifyStudentExists(@PathVariable("id") Long id) {
+        if (studentDAO.findById(id) == null) throw new ResourceNotFoundException("Student not found for ID: " + id);
     }
 
 }

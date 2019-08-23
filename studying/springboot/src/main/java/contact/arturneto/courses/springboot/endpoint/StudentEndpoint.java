@@ -1,13 +1,10 @@
 package contact.arturneto.courses.springboot.endpoint;
 
-import contact.arturneto.courses.springboot.error.CustomErrorType;
 import contact.arturneto.courses.springboot.error.ResourceNotFoundException;
 import contact.arturneto.courses.springboot.model.Student;
 import contact.arturneto.courses.springboot.repository.StudentRepository;
-import contact.arturneto.courses.springboot.util.DateUtil;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;

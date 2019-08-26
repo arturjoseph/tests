@@ -15,5 +15,6 @@ public class RestTemplateClient {
         ResponseEntity<Student> entity = rest.getForEntity("/{id}", Student.class, 1);
         System.out.println(student);
         System.out.println(entity);
+
     }
 }

@@ -59,5 +59,5 @@ public class StudentRepositoryTest {
 
         assertThat(students.size()).isEqualTo(2);
     }
-    
+
 }

@@ -1,5 +1,0 @@
-/Users/arturneto/projects/learning/education/studying/AprendendoCSharp/1-PrimeiroProjeto/bin/Debug/1-PrimeiroProjeto.exe
-/Users/arturneto/projects/learning/education/studying/AprendendoCSharp/1-PrimeiroProjeto/bin/Debug/1-PrimeiroProjeto.pdb
-/Users/arturneto/projects/learning/education/studying/AprendendoCSharp/1-PrimeiroProjeto/obj/Debug/1-PrimeiroProjeto.csprojAssemblyReference.cache
-/Users/arturneto/projects/learning/education/studying/AprendendoCSharp/1-PrimeiroProjeto/obj/Debug/1-PrimeiroProjeto.exe
-/Users/arturneto/projects/learning/education/studying/AprendendoCSharp/1-PrimeiroProjeto/obj/Debug/1-PrimeiroProjeto.pdb

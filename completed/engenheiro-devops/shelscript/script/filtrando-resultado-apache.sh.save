@@ -1,0 +1,128 @@
+#!/bin/bash
+
+cd ~/Projetos/estudos_alura/shelscript/apache-server
+
+regex="\b([0-9]{1,3}\.){3}[0-9]{1,3}\b"
+<div class="formattedText">
+                                <p>Em uma reunião com os diretores da <em>Multillidae</em>, nos informaram que existe um <a href="https://drive.google.com/open?id=0BzmYQVmw4W7nZmxnenBZdVpRalE" target="_blank" rel="nofollow">arquivo de log</a> de um servidor, onde eles precisam realizar alguns filtros para buscar resultados a fim de analisá-los.</p>
+<p>Vamos abrir o terminar para checar esse arquivo de log, utilizando o comando <code>ls</code>.</p>
+<p>Com o comando <code>cd apache-log</code>, podemos entrar no diretório, e logo depois encontramos o arquivo de log do servidor apache. Para melhorar a nossa análise, vamos trazer todo o resultado que consta nesse arquivo para o terminal.</p>
+<pre class="prettyprint"><code><span class="pln">$ cat apache</span><span class="pun">.</span><span class="pln">log</span></code></pre>
+<p>Como resultado, temos informações presentes que precisam ser analisadas pelos diretores da <em>Multillidae</em>, onde é necessário realizar um filtro. Esse filtro consiste em se basear pelo endereço IP de um usuário, para que seja possível ver os acessos desse determinado endereço.</p>
+<p>Faremos um teste. Vamos supor que iremos verificar o acesso do respectivo ao endereço IP <code>47.86.228.66</code>. Nas etapas anteriores, já utilizamos algumas espécies de filtros através do <strong>grep</strong>, por isso, vamos utilizá-lo agora, redirecionando a saída para o próprio grep.</p>
+<pre class="prettyprint"><code><span class="pln">$ cat apache</span><span class="pun">.</span><span class="pln">log </span><span class="pun">|</span><span class="pln"> grep </span><span class="lit">47.86</span><span class="pun">.</span><span class="lit">228.66</span></code></pre>
+<p>Ao redirecionar a saída para o grep, queremos que ele filtre somente os resultados respectivos ao endereço IP apresentado.</p>
+<p>Após o "Enter", obtemos uma URL acessada pelo endereço IP. Maravilha! Vimos que esse comando funcionou corretamente e nos trouxe informações relevantes, por isso, vamos utilizá-lo em um novo script que será criado no diretório de scripts para os diretores da <em>Multillidae</em>.</p>
+<p>Voltamos para a "Home", e depois entramos na pasta <code>/Scripts</code> com o comando <code>cd ~/Scripts/</code>.</p>
+<p>Com o comando <code>nano</code>, criamos novos arquivos, no caso, chamaremos o novo script de <strong>filtrando-resultado-apache.sh</strong>.</p>
+<p>A primeira linha do script deve conter o <strong>interpretador</strong>.</p>
+<pre class="prettyprint"><code><span class="com">#!/bin/bash</span></code></pre>
+<p>O primeiro passo a ser executado é <em>entrar no diretório</em> <code>/apache-log</code>, pois é onde se encontra o arquivo.</p>
+<pre class="prettyprint"><code><span class="com">#!/bin/bash</span><span class="pln">
+
+cd </span><span class="pun">~/</span><span class="pln">apache</span><span class="pun">-</span><span class="pln">log</span></code></pre>
+<p>Após estar dentro do diretório <code>/apache-log</code>, queremos mostrar no terminal, o resultado do arquivo de log, entretanto, queremos redirecionar a saída para o  <strong>grep</strong>, assim é possível realizar o filtro de acordo com o endereço IP passado pelo usuário.</p>
+<p>Como esse endereço será passado pelo usuário, então ele será passado como um <strong>parâmetro</strong>.</p>
+<p>Para pegarmos o resultado de um parâmetro, utilizamos o símbolo <code>$</code> e o número <code>1</code> (<em>fazendo a referência ao primeiro parâmetro</em>):</p>
+<pre class="prettyprint"><code><span class="com">#!/bin/bash</span><span class="pln">
+
+cd </span><span class="pun">~/</span><span class="pln">apache</span><span class="pun">-</span><span class="pln">log
+
+cat apache</span><span class="pun">.</span><span class="pln">log </span><span class="pun">|</span><span class="pln"> grep $1</span></code></pre>
+<p>Testaremos esse script. Usaremos "Ctrl + X" para sair e "Y" para salvar, utilizaremos o comando para executá-lo, passando o endereço IP como parâmetro:</p>
+<pre class="prettyprint"><code><span class="pln">$ bash filtrando</span><span class="pun">-</span><span class="pln">resultado</span><span class="pun">-</span><span class="pln">apache</span><span class="pun">.</span><span class="pln">sh </span><span class="lit">47.86</span><span class="pun">.</span><span class="lit">228.66</span></code></pre>
+<p>O nosso Script, foi capaz de retornar o resultado dos acessos ao respectivo endereço IP. Voltando ao Script, repare que nós simplesmente estamos pegando esse parâmetro que é passado pelo usuário, e tentamos realizar esse filtro. Porém, <strong>o que nos garante que o parâmetro passado pelo usuário, é um formato de um endereço IP?</strong></p>
+<p>Ele poderia passar uma palavra qualquer, não é mesmo? Não estamos fazendo nenhuma espécie de validação. E é justamente isso o que foi pedido para nós!</p>
+<p>Vamos fazer uma <strong>validação</strong> para certificar que o formato padrão de entrada seja somente o <em>endereço IP</em>.</p>
+<p>Usaremos as <strong><em>expressões regulares</em></strong> para conseguir validar essa entrada de dados. E como podemos usar as expressões regulares a fim de nos ajudar com essa tarefa?</p>
+<p>Vamos abrir o editor de texto <strong>gedit</strong> para analisarmos o endereço IP.</p>
+<p>Um endereço IP bem comum de se encontrar, é o <code>192.168.1.10</code>. Nesse endereço, todos os intervalos são formados por números, e os intervalos são separados por pontos (<em>temos que levar em conta essas duas informações para fazer a validação</em>).</p>
+<p>A primeira etapa da validação será de permitir que a entrada seja somente <strong>um número</strong>.</p>
+<p>Utilizando o <code>grep</code> para filtrar os dígitos de zero até nove, vamos colocar dessa forma: <code>[0-9]</code>, assim estamos dizendo que os números podem variar de <strong>0</strong> até o <strong>9</strong>. Mas repare que no primeiro e no segundo intervalo, existem não só 1, mas 3 algarismos, e no terceiro e quarto intervalos, temos respectivamente 1 e 2 algarismos.</p>
+<p>Com isso, vemos que a nossa validação precisa aceitar uma <em>variação</em> de <strong>um a três</strong> algarismos. Temos que especificar que o valor mínimo de algarismos é <code>1</code> e o valor máximo de algarismos por cada intervalo é <code>3</code>. Representamos assim:</p>
+<pre class="prettyprint"><code><span class="pun">[</span><span class="lit">0</span><span class="pun">-</span><span class="lit">9</span><span class="pun">]{</span><span class="lit">1</span><span class="pun">,</span><span class="lit">3</span><span class="pun">}</span></code></pre>
+<p>Feita a validação do <strong>primeiro intervalo</strong>, temos que realizar a validação do segundo! Só que para chegar ao segundo intervalo, temos a separação do ponto.</p>
+<p>O segundo intervalo segue a mesma regra de validação do primeiro, pois é formado por números que podem variar de um a três algarismos.</p>
+<pre class="prettyprint"><code><span class="pun">[</span><span class="lit">0</span><span class="pun">-</span><span class="lit">9</span><span class="pun">]{</span><span class="lit">1</span><span class="pun">,</span><span class="lit">3</span><span class="pun">}.[</span><span class="lit">0</span><span class="pun">-</span><span class="lit">9</span><span class="pun">]{</span><span class="lit">1</span><span class="pun">,</span><span class="lit">3</span><span class="pun">}</span></code></pre>
+<p>Para chegar ao terceiro intervalo, temos um ponto, e novamente, esse intervalo receberá a mesma validação, pois é formado por números que podem variar de um a três algarismos. O mesmo acontece com o último intervalo.</p>
+<pre class="prettyprint"><code><span class="pun">[</span><span class="lit">0</span><span class="pun">-</span><span class="lit">9</span><span class="pun">]{</span><span class="lit">1</span><span class="pun">,</span><span class="lit">3</span><span class="pun">}.[</span><span class="lit">0</span><span class="pun">-</span><span class="lit">9</span><span class="pun">]{</span><span class="lit">1</span><span class="pun">,</span><span class="lit">3</span><span class="pun">}.[</span><span class="lit">0</span><span class="pun">-</span><span class="lit">9</span><span class="pun">]{</span><span class="lit">1</span><span class="pun">,</span><span class="lit">3</span><span class="pun">}.[</span><span class="lit">0</span><span class="pun">-</span><span class="lit">9</span><span class="pun">]{</span><span class="lit">1</span><span class="pun">,</span><span class="lit">3</span><span class="pun">}</span></code></pre>
+<p>Bom, é claro que podemos melhorar a nossa expressão regular. Se repararmos, o trecho <code>[0-9]{1,3}.</code> se repete por 3 vezes. Poderíamos simplesmente agrupar esse valor entre <code>()</code> e colocar um <strong>quantificador</strong> para dizer que a parte agrupada irá se repetir por 3 vezes:</p>
+<pre class="prettyprint"><code><span class="pun">([</span><span class="lit">0</span><span class="pun">-</span><span class="lit">9</span><span class="pun">]{</span><span class="lit">1</span><span class="pun">,</span><span class="lit">3</span><span class="pun">}.){</span><span class="lit">3</span><span class="pun">}[</span><span class="lit">0</span><span class="pun">-</span><span class="lit">9</span><span class="pun">]{</span><span class="lit">1</span><span class="pun">,</span><span class="lit">3</span><span class="pun">}</span></code></pre>
+<p>Vamos ver como essa expressão regular irá se comportar como estamos esperando.</p>
+<p>Para nos ajudar nessa verificação, utilizaremos o site <a href="https://regex101.com/" target="_blank" rel="nofollow">regex101.com</a>. Existem outros sites que também conseguem essa validação.</p>
+<p>Copiaremos a expressão criada, e vamos colar no campo <strong>REGULAR EXPRESSION</strong> nesse mesmo site. Depois, no campo <strong>TEST STRING</strong>, colocaremos o endereço IP que havíamos testado: <code>192.168.1.10</code>.</p>
+<p>O site nos retornou <em><code>1 match</code></em>, significa que o resultado <code>([0-9]{1,3}.){3}[0-9]{1,3}</code> teve um padrão aceito em nossa expressão regular. Vamos fazer o seguinte. Tentaremos trocar o <strong>ponto</strong> por uma <strong>vírgula</strong>. O site nos retorna algo diferente de antes? Não! Continua sendo exibido <em><code>1 match</code></em>!</p>
+<p>Isso acontece porque colocamos o ponto em nossa expressão regular, porém não realizamos o escape dele, dizendo que literalmente a divisão entre esses intervalos precisa ser somente o <strong>ponto</strong>. Para dizer que somente o ponto é aceito para dividir esses intervalos, colocamos a barra <code>\</code> antes do ponto, assim nós o "escapamos".</p>
+<p>Sempre que fazemos isso, estamos dizendo que a divisão entre os intervalos só pode ser o ponto!</p>
+<pre class="prettyprint"><code><span class="pun">([</span><span class="lit">0</span><span class="pun">-</span><span class="lit">9</span><span class="pun">]{</span><span class="lit">1</span><span class="pun">,</span><span class="lit">3</span><span class="pun">}</span><span class="pln">\.</span><span class="pun">){</span><span class="lit">3</span><span class="pun">}[</span><span class="lit">0</span><span class="pun">-</span><span class="lit">9</span><span class="pun">]{</span><span class="lit">1</span><span class="pun">,</span><span class="lit">3</span><span class="pun">}</span></code></pre>
+<p>Para testar, temos o endereço IP, podendo variar de um a três algarismos. Tentaremos colocar um algarismo a mais do permitido no final, a fim de testá-lo. Então, o endereço IP ficará assim: <code>192.168.1.1000</code>.</p>
+<p>Como podemos ver, esse endereço <em>é compatível</em> com a expressão regular. Ele só é compatível, porque o que está sendo considerado é somente <strong>192.168.1.100</strong>0. Mas se o usuário digitar dessa forma no script (com um dígito a mais), o padrão seria aceito, o que não deveria acontecer. </p>
+<p>Sendo assim, é interessante colocarmos um <strong>delimitador</strong>, dizendo que nada no final ou no início pode existir!</p>
+<p>O delimitador de palavras é o <strong>Word Boundary</strong>, simbolizado por <code>\b</code>. Adicionando esse delimitador nas extremidades da expressão, não será reconhecido nenhum algarismo que ultrapasse a quantidade de <strong>3 por intervalo</strong>.</p>
+<pre class="prettyprint"><code><span class="pln">\b</span><span class="pun">([</span><span class="lit">0</span><span class="pun">-</span><span class="lit">9</span><span class="pun">]{</span><span class="lit">1</span><span class="pun">,</span><span class="lit">3</span><span class="pun">}</span><span class="pln">\.</span><span class="pun">){</span><span class="lit">3</span><span class="pun">}[</span><span class="lit">0</span><span class="pun">-</span><span class="lit">9</span><span class="pun">]{</span><span class="lit">1</span><span class="pun">,</span><span class="lit">3</span><span class="pun">}</span><span class="pln">\b</span></code></pre>
+<p>Bom, com isso, sabemos que o endereço IP <code>192.168.1.1000</code> não será aceito pois ele não está respeitando as regras da expressão.</p>
+<p>Se tentarmos, por exemplo, substituir um número por uma letra. <code>1a2.168.1.10</code> O que nos retornaria? Com certeza não foi aceito, pois a expressão regular não permite letras, somente números.</p>
+<p>Vamos copiar a nossa expressão regular, para colocá-la no script.</p>
+<p>É interessante que essa expressão regular esteja dentro de uma variável, assim ficará mais fácil de manuseá-la.</p>
+<pre class="prettyprint"><code><span class="com">#!/bin/bash</span><span class="pln">
+
+cd </span><span class="pun">~/</span><span class="pln">apache</span><span class="pun">-</span><span class="pln">log
+
+regex</span><span class="pun">=</span><span class="str">"\b([0-9]{1,3}\.){3}[0-9]{1,3}\b"</span><span class="pln">
+
+cat apache</span><span class="pun">.</span><span class="pln">log </span><span class="pun">|</span><span class="pln"> grep $1</span></code></pre>
+<p>Agora, validaremos o parâmetro passado pelo nosso usuário utilizando essa expressão regular através do <code>if</code>. </p>
+<p>Dentro do <code>if</code>, iremos comparar o parâmetro passado pelo usuário com a expressão regular.</p>
+<blockquote>
+<p>Utilizamos 2 colchetes (<strong>[]</strong>) para envolver a comparação, e utilizamos (<strong>=~</strong>) para fazer a comparação.</p>
+</blockquote>
+<pre class="prettyprint"><code><span class="com">#!/bin/bash</span><span class="pln">
+
+cd </span><span class="pun">~/</span><span class="pln">apache</span><span class="pun">-</span><span class="pln">log
+
+regex</span><span class="pun">=</span><span class="str">"\b([0-9]{1,3}\.){3}[0-9]{1,3}\b"</span><span class="pln">
+</span><span class="kwd">if</span><span class="pln"> </span><span class="pun">[[</span><span class="pln"> $1 </span><span class="pun">=~</span><span class="pln"> $regex </span><span class="pun">]]</span><span class="pln">
+cat apache</span><span class="pun">.</span><span class="pln">log </span><span class="pun">|</span><span class="pln"> grep $1</span></code></pre>
+<p>Se o parâmetro passado pelo usuário está de acordo com a expressão regular, será feita a verificação do arquivo de log. </p>
+<pre class="prettyprint"><code><span class="kwd">if</span><span class="pln"> </span><span class="pun">[[</span><span class="pln"> $1 </span><span class="pun">=~</span><span class="pln"> $regex </span><span class="pun">]]</span><span class="pln">
+</span><span class="kwd">then</span><span class="pln">
+    cat apache</span><span class="pun">.</span><span class="pln">log </span><span class="pun">|</span><span class="pln"> grep $1</span></code></pre>
+<p>Se não for um parâmetro compatível com a expressão regular, será impresso uma mensagem para o usuário.</p>
+<pre class="prettyprint"><code><span class="kwd">if</span><span class="pln"> </span><span class="pun">[[</span><span class="pln"> $1 </span><span class="pun">=~</span><span class="pln"> $regex </span><span class="pun">]]</span><span class="pln">
+</span><span class="kwd">then</span><span class="pln">
+    cat apache</span><span class="pun">.</span><span class="pln">log </span><span class="pun">|</span><span class="pln"> grep $1
+</span><span class="kwd">else</span><span class="pln">
+    echo </span><span class="str">"Formato não é válido"</span><span class="pln">
+</span><span class="kwd">fi</span></code></pre>
+<p>Salvamos as alterações com "Ctrl + X" e "Y", e realizamos a execução do script passando o IP <code>47.86.228.66</code> como parâmetro.</p>
+<pre class="prettyprint"><code><span class="pln">$ bash filtrando</span><span class="pun">-</span><span class="pln">resultado</span><span class="pun">-</span><span class="pln">apache</span><span class="pun">.</span><span class="pln">sh </span><span class="lit">47.86</span><span class="pun">.</span><span class="lit">228.66</span></code></pre>
+<p>Se tudo estiver certo, o script será capaz de filtrar esse endereço IP.</p>
+<p>Vamos supor que o quarto intervalo desse mesmo endereço IP tenha quatro algorismos, e assim, nós rodamos o script com o novo intervalo:</p>
+<pre class="prettyprint"><code><span class="pln">$ bash filtrando</span><span class="pun">-</span><span class="pln">resultado</span><span class="pun">-</span><span class="pln">apache</span><span class="pun">.</span><span class="pln">sh </span><span class="lit">47.86</span><span class="pun">.</span><span class="lit">228.1000</span></code></pre>
+<p>Quatro algarismos não é um formato válido. Por essa razão, temos como resultado a mensagem <code>Formato nao e valido</code>. Vamos deixar do jeito que estava, e agora, retiramos o ponto e colocarmos uma vírgula. O que vamos obter? </p>
+<p>Novamente, obtemos a mesma mensagem! Isso significa que o formato não é válido pois a expressão regular não aceita vírgulas. Da mesma forma, se substituirmos qualquer número por uma letra qualquer, vamos obter a mesma mensagem de erro.</p>
+<p>Então, com isso, nós conseguimos fazer uma verificação maior do que o nosso usuário pode estar passando como parâmetro.</p>
+<p>Também podemos analisar um outro cenário, não menos interessante. Vamos rodar o script, passando como parâmetro o endereço IP <code>1.1.1.1</code>.</p>
+<p>Esse é um endereço IP válido, pois ele está dentro das regras da expressão. Entretanto, esse endereço pode <strong>não existir</strong> em nosso endereço de log. Verificaremos se o parâmetro passado pelo usuário, existe ou não no arquivo de log. Como podemos realizar essa verificação?</p>
+<p>Nas parte 1 do curso de Shell Scripting anteriores, abordamos os <strong>status de saída</strong>, e encontramos uma oportunidade de usá-los novamente nesta aula.</p>
+<p>Os status de saída irão, justamente, checar se o parâmetro passado pelo usuário, existe ou não no arquivo de log. </p>
+<blockquote>
+<p>RELEMBRANDO: Se tudo ocorreu bem, o status será <strong>0</strong>. Se não, o status será <strong>diferente de zero</strong>.</p>
+</blockquote>
+<p>Abriremos o script novamente. Validaremos o status de saída do comando <code>cat</code>.</p>
+<pre class="prettyprint"><code><span class="kwd">if</span><span class="pln"> </span><span class="pun">[[</span><span class="pln"> $1 </span><span class="pun">=~</span><span class="pln"> $regex </span><span class="pun">]]</span><span class="pln">
+</span><span class="kwd">then</span><span class="pln">
+    cat apache</span><span class="pun">.</span><span class="pln">log </span><span class="pun">|</span><span class="pln"> grep $1
+    </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">[</span><span class="pln"> $</span><span class="pun">?</span><span class="pln"> </span><span class="pun">-</span><span class="pln">ne </span><span class="lit">0</span><span class="pln"> </span><span class="pun">]</span><span class="pln">
+    </span><span class="kwd">then</span><span class="pln">
+        echo </span><span class="str">"O endereco IP procurado nao esta presente no arquivo"</span><span class="pln">
+    </span><span class="kwd">fi</span><span class="pln">
+</span><span class="kwd">else</span><span class="pln">
+    echo </span><span class="str">"Formato não é válido"</span><span class="pln">
+</span><span class="kwd">fi</span></code></pre>
+<p>Vamos testar! Usaremos novamente o endereço IP <code>1.1.1.1</code>.</p>
+<p>Recebemos a mensagem de que <code>O endereco IP procurado nao esta presente no arquivo</code>. E se usarmos o endereço que já existe no arquivo de log?</p>
+<p>Como o endereço já existe dentro do arquivo de log, será filtrado e retornado para nós o resultado desse endereço IP!</p>
+<p>Agora, o nosso script já consegue ajudar os diretores na tarefa de filtrar o resultado baseado no endereço IP, e consegue fazer uma validação um pouco melhor do parâmetro que está sendo passado pelo usuário.</p>
+
+                        </div>

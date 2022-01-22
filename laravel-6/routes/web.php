@@ -2,6 +2,4 @@
 
 Route::resource('products', 'ProductController');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::any('products.search', 'ProductController@search')->name('products.search');

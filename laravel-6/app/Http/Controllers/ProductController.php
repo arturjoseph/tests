@@ -3,10 +3,20 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreUpdateProductRequest;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
+    protected Request $request;
+    private Product $repository;
+
+    public function __construct(Request $request, Product $product)
+    {
+        $this->$request = $request;
+        $this->repository = $product;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +24,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return view('admin.pages.products.index');
+        $products = $this->repository->paginate();
+        return view('admin.pages.products.index', ['products' => $products]);
     }
 
     /**
@@ -35,18 +46,14 @@ class ProductController extends Controller
      */
     public function store(StoreUpdateProductRequest $request)
     {
-       /* $request->validate([
-            'nome'=> 'required|min:3|max:255',
-            'descricao'=> 'min:3|max:255',
-            'foto'=> 'required|image',
-        ]);
 
-        dd('OK');*/
-
-        if($request->file('photo')->isValid()){
-            $nameFile = $request->nome . '.' . $request->foto->extension();
-            dd($request->foto->storeAs('products', $nameFile));
+        $data = $request->only('name','description','price');
+        if($request->hasFile('image') && $request->image->isValid()){
+            $imagePath = $request->image->store('products');
+            $data['image'] =  $imagePath;
         }
+        $this->repository->create($data);
+        return redirect()->route('products.index');
 
     }
 
@@ -58,7 +65,10 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        //
+
+        if(!$product = $this->repository->find($id))
+            return redirect()->back();
+        return view('admin.pages.products.show', ['product' => $product]);
     }
 
     /**
@@ -69,7 +79,10 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        return view('admin.pages.products.edit', compact('id'));
+
+        if(!$product = $this->repository->find($id))
+            return redirect()->back();
+        return view('admin.pages.products.edit', ['product' => $product]);
     }
 
     /**
@@ -79,9 +92,13 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(StoreUpdateProductRequest $request, $id)
     {
-        dd('Editando produto $id');
+        if(!$product = $this->repository->find($id))
+        return redirect()->back();
+        $product->update($request->all());
+        return redirect()->route('products.index');
+
     }
 
     /**
@@ -92,6 +109,15 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        if(!$product = $this->repository->find($id))
+            return redirect()->back();
+        $product->delete();
+        return redirect()->route('products.index');
+    }
+
+    public function search(Request $request)
+    {
+        $products = $this->repository->search($request->search);
+        return view('admin.pages.products.index', ['products' => $products]);
     }
 }

@@ -24,9 +24,21 @@ class StoreUpdateProductRequest extends FormRequest
     public function rules()
     {
         return [
-            'nome'=> 'required|min:3|max:255',
-            'descricao'=> 'min:3|max:255',
-            'foto'=> 'required|image',
+            'name'=> 'required|min:3|max:255|unique:products',
+            'description'=> 'required|min:3|max:255',
+            'price'=> 'required',
+            'image'=> 'nullable|image',
+        ];
+    }
+
+    public function messages()
+    {
+        return[
+            'name.required'=>'O campo nome é obrigatório!',
+            'name.min'=>'O campo nome deve conter no mínimo 3 caracteres!',
+            'description.required'=>'O campo descrição é obrigatório!',
+            'description.min'=>'O campo descrição deve conter no mínimo 3 caracteres!',
+            'price.required'=>'O campo preço é obrigatório!',
         ];
     }
 }

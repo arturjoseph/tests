@@ -1,6 +1,0 @@
-/Users/arturneto/Documents/pessoal/projetos/aprendendo/education/studying/csharp/AprendendoCSharp/1-PrimeiroProjeto/bin/Debug/1-PrimeiroProjeto.exe.config
-/Users/arturneto/Documents/pessoal/projetos/aprendendo/education/studying/csharp/AprendendoCSharp/1-PrimeiroProjeto/bin/Debug/1-PrimeiroProjeto.exe
-/Users/arturneto/Documents/pessoal/projetos/aprendendo/education/studying/csharp/AprendendoCSharp/1-PrimeiroProjeto/bin/Debug/1-PrimeiroProjeto.pdb
-/Users/arturneto/Documents/pessoal/projetos/aprendendo/education/studying/csharp/AprendendoCSharp/1-PrimeiroProjeto/obj/Debug/1-PrimeiroProjeto.csproj.CoreCompileInputs.cache
-/Users/arturneto/Documents/pessoal/projetos/aprendendo/education/studying/csharp/AprendendoCSharp/1-PrimeiroProjeto/obj/Debug/1-PrimeiroProjeto.exe
-/Users/arturneto/Documents/pessoal/projetos/aprendendo/education/studying/csharp/AprendendoCSharp/1-PrimeiroProjeto/obj/Debug/1-PrimeiroProjeto.pdb

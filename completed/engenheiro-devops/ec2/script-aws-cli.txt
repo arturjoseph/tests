@@ -1,6 +1,0 @@
---Criar instancias
-aws ec2 run-instances --image-id ami-d08633aa --count 1 --instance-type t2.micro --key-name "catalogo" --security-group-ids launch-wizard-1
---Criar Load balancer
-aws elb create-load-balancer --load-balancer-name "aws-cli-lb" --listeners "Protocol=HTTP,LoadBalancerPort=80,InstanceProtocol=HTTP,InstancePort=8080" --availability-zones us-east-1a us-east-1b us-east-1c
---Configurar instancias no Load balancer
-aws elb register-instances-with-load-balancer --load-balancer-name "aws-cli-lb" --instances i-07f0e032e132e81ec i-0d612a8fc87943277

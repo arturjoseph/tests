@@ -1,9 +1,0 @@
-Configurar teste de integração com ChromeDriver(Para desktop)
-
-Goals Build
-clean verify -Ptestes-integracao -Dwebdriver.chrome.driver=/home/artur/git/estudos_alura/engenheiro-devops/ci/chromedriver
-
-Configurar teste de integração com PhantomJS(Para Servidores)
-
-Goals Build
-clean verify -Ptestes-integracao -Dphantomjs.binary.path=/home/artur/git/estudos_alura/engenheiro-devops/ci/phantomjs-2.1.1-linux-x86_64/bin/phantomjs

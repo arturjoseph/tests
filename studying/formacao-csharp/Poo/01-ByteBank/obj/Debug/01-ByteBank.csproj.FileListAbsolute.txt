@@ -1,6 +1,0 @@
-/Users/arturneto/Documents/pessoal/projetos/aprendendo/education/studying/csharp/Poo/01-ByteBank/bin/Debug/01-ByteBank.exe.config
-/Users/arturneto/Documents/pessoal/projetos/aprendendo/education/studying/csharp/Poo/01-ByteBank/bin/Debug/01-ByteBank.exe
-/Users/arturneto/Documents/pessoal/projetos/aprendendo/education/studying/csharp/Poo/01-ByteBank/bin/Debug/01-ByteBank.pdb
-/Users/arturneto/Documents/pessoal/projetos/aprendendo/education/studying/csharp/Poo/01-ByteBank/obj/Debug/01-ByteBank.csproj.CoreCompileInputs.cache
-/Users/arturneto/Documents/pessoal/projetos/aprendendo/education/studying/csharp/Poo/01-ByteBank/obj/Debug/01-ByteBank.exe
-/Users/arturneto/Documents/pessoal/projetos/aprendendo/education/studying/csharp/Poo/01-ByteBank/obj/Debug/01-ByteBank.pdb

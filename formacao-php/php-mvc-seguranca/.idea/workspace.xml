@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5f0bd218-9fe6-444f-b6d5-212e5b9d7c5f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../php-mvc-boas-praticas/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mvc-boas-praticas/composer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mvc-boas-praticas/config/dependencies.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mvc-boas-praticas/config/routes.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mvc-boas-praticas/cria-usuario.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mvc-boas-praticas/public/css/estilos-form.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mvc-boas-praticas/public/css/estilos.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mvc-boas-praticas/public/css/flexbox.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mvc-boas-praticas/public/css/reset.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mvc-boas-praticas/public/img/cabecalho/Logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mvc-boas-praticas/public/img/cabecalho/video_call.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mvc-boas-praticas/public/img/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mvc-boas-praticas/public/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mvc-boas-praticas/src/Controller/Controller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mvc-boas-praticas/src/Controller/DeleteVideoController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mvc-boas-praticas/src/Controller/EditVideoController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mvc-boas-praticas/src/Controller/Error404Controller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mvc-boas-praticas/src/Controller/JsonVideoListController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mvc-boas-praticas/src/Controller/LoginController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mvc-boas-praticas/src/Controller/LoginFormController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mvc-boas-praticas/src/Controller/LogoutController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mvc-boas-praticas/src/Controller/NewJsonVideoController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mvc-boas-praticas/src/Controller/NewVideoController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mvc-boas-praticas/src/Controller/VideoFormController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mvc-boas-praticas/src/Controller/VideoListController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mvc-boas-praticas/src/Entity/Video.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mvc-boas-praticas/src/Helper/FlashMessageTrait.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mvc-boas-praticas/src/Repository/VideoRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mvc-boas-praticas/views/layout.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mvc-boas-praticas/views/login-form.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mvc-boas-praticas/views/video-form.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mvc-boas-praticas/views/video-list.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cria-usuario.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/estilos-form.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/estilos.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/flexbox.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/reset.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/cabecalho/Logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/cabecalho/video_call.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Controller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/DeleteVideoController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/EditVideoController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Error404Controller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/JsonVideoListController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/LoginController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/LoginFormController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/LogoutController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/NewJsonVideoController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/NewVideoController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/VideoFormController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/VideoListController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Video.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/VideoRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tabela-usuario.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tabela-videos.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/fim-html.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/inicio-html.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/login-form.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/video-form.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/video-list.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/.idea/php-mysql.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/.idea/php.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/admin.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/cadastrar-produto.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/composer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/composer.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/conteudo-pdf.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/css/admin.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/css/form.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/css/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/css/reset.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/editar-produto.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/excluir-produto.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/gerador-pdf.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/img/66da738a1f0e7file-mignon.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/img/banner-site.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/img/bife.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/img/cafe-com-leite.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/img/cafe-cremoso.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/img/cafe-gelado.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/img/cafe-gelado.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/img/cappuccino.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/img/fettuccine.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/img/icone-serenatto.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/img/logo-serenatto-horizontal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/img/logo-serenatto.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/img/ornaments-coffee.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/img/prato-frango.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/img/prato-peixe.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/js/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/src/Modelo/Produto.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/src/Repositorio/ProdutoRepositorio.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/src/conexao-bd.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/autoload.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/composer/ClassLoader.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/composer/InstalledVersions.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/composer/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/composer/autoload_classmap.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/composer/autoload_namespaces.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/composer/autoload_psr4.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/composer/autoload_real.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/composer/autoload_static.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/composer/installed.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/composer/installed.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/composer/platform_check.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/AUTHORS.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/LICENSE.LGPL" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/VERSION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/composer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/lib/Cpdf.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/lib/fonts/Courier-Bold.afm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/lib/fonts/Courier-BoldOblique.afm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/lib/fonts/Courier-Oblique.afm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/lib/fonts/Courier.afm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/lib/fonts/DejaVuSans-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/lib/fonts/DejaVuSans-Bold.ufm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/lib/fonts/DejaVuSans-BoldOblique.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/lib/fonts/DejaVuSans-BoldOblique.ufm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/lib/fonts/DejaVuSans-Oblique.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/lib/fonts/DejaVuSans-Oblique.ufm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/lib/fonts/DejaVuSans.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/lib/fonts/DejaVuSans.ufm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/lib/fonts/DejaVuSansMono-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/lib/fonts/DejaVuSansMono-Bold.ufm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/lib/fonts/DejaVuSansMono-BoldOblique.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/lib/fonts/DejaVuSansMono-BoldOblique.ufm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/lib/fonts/DejaVuSansMono-Oblique.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/lib/fonts/DejaVuSansMono-Oblique.ufm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/lib/fonts/DejaVuSansMono.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/lib/fonts/DejaVuSansMono.ufm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/lib/fonts/DejaVuSerif-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/lib/fonts/DejaVuSerif-Bold.ufm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/lib/fonts/DejaVuSerif-BoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/lib/fonts/DejaVuSerif-BoldItalic.ufm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/lib/fonts/DejaVuSerif-Italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/lib/fonts/DejaVuSerif-Italic.ufm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/lib/fonts/DejaVuSerif.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/lib/fonts/DejaVuSerif.ufm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/lib/fonts/Helvetica-Bold.afm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/lib/fonts/Helvetica-BoldOblique.afm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/lib/fonts/Helvetica-Oblique.afm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/lib/fonts/Helvetica.afm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/lib/fonts/Symbol.afm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/lib/fonts/Times-Bold.afm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/lib/fonts/Times-Bold.afm.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/lib/fonts/Times-BoldItalic.afm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/lib/fonts/Times-Italic.afm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/lib/fonts/Times-Roman.afm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/lib/fonts/Times-Roman.afm.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/lib/fonts/ZapfDingbats.afm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/lib/fonts/installed-fonts.dist.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/lib/fonts/mustRead.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/lib/res/broken_image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/lib/res/broken_image.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/lib/res/html.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/Adapter/CPDF.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/Adapter/GD.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/Adapter/PDFLib.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/Canvas.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/CanvasFactory.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/Cellmap.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/Css/AttributeTranslator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/Css/Color.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/Css/Content/Attr.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/Css/Content/CloseQuote.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/Css/Content/ContentPart.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/Css/Content/Counter.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/Css/Content/Counters.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/Css/Content/NoCloseQuote.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/Css/Content/NoOpenQuote.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/Css/Content/OpenQuote.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/Css/Content/StringPart.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/Css/Content/Url.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/Css/Style.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/Css/Stylesheet.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/Dompdf.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/Exception.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/Exception/ImageException.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/FontMetrics.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/Frame.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/Frame/Factory.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/Frame/FrameListIterator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/Frame/FrameTree.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/Frame/FrameTreeIterator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/FrameDecorator/AbstractFrameDecorator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/FrameDecorator/Block.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/FrameDecorator/Image.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/FrameDecorator/Inline.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/FrameDecorator/ListBullet.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/FrameDecorator/ListBulletImage.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/FrameDecorator/NullFrameDecorator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/FrameDecorator/Page.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/FrameDecorator/Table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/FrameDecorator/TableCell.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/FrameDecorator/TableRow.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/FrameDecorator/TableRowGroup.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/FrameDecorator/Text.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/FrameReflower/AbstractFrameReflower.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/FrameReflower/Block.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/FrameReflower/Image.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/FrameReflower/Inline.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/FrameReflower/ListBullet.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/FrameReflower/NullFrameReflower.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/FrameReflower/Page.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/FrameReflower/Table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/FrameReflower/TableCell.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/FrameReflower/TableRow.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/FrameReflower/TableRowGroup.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/FrameReflower/Text.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/Helpers.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/Image/Cache.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/JavascriptEmbedder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/LineBox.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/Options.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/PhpEvaluator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/Positioner/Absolute.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/Positioner/AbstractPositioner.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/Positioner/Block.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/Positioner/Fixed.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/Positioner/Inline.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/Positioner/ListBullet.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/Positioner/NullPositioner.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/Positioner/TableCell.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/Positioner/TableRow.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/Renderer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/Renderer/AbstractRenderer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/Renderer/Block.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/Renderer/Image.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/Renderer/Inline.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/Renderer/ListBullet.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/Renderer/TableCell.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/Renderer/TableRow.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/Renderer/TableRowGroup.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/dompdf/src/Renderer/Text.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/AUTHORS.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/composer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/maps/adobe-standard-encoding.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/maps/cp1250.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/maps/cp1251.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/maps/cp1252.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/maps/cp1253.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/maps/cp1254.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/maps/cp1255.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/maps/cp1257.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/maps/cp1258.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/maps/cp874.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/maps/iso-8859-1.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/maps/iso-8859-11.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/maps/iso-8859-15.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/maps/iso-8859-16.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/maps/iso-8859-2.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/maps/iso-8859-4.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/maps/iso-8859-5.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/maps/iso-8859-7.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/maps/iso-8859-9.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/maps/koi8-r.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/maps/koi8-u.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/src/FontLib/AdobeFontMetrics.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/src/FontLib/BinaryStream.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/src/FontLib/EOT/File.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/src/FontLib/EOT/Header.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/src/FontLib/EncodingMap.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/src/FontLib/Exception/FontNotFoundException.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/src/FontLib/Font.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/src/FontLib/Glyph/Outline.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/src/FontLib/Glyph/OutlineComponent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/src/FontLib/Glyph/OutlineComposite.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/src/FontLib/Glyph/OutlineSimple.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/src/FontLib/Header.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/src/FontLib/OpenType/File.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/src/FontLib/OpenType/TableDirectoryEntry.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/src/FontLib/Table/DirectoryEntry.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/src/FontLib/Table/Table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/cmap.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/cvt.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/fpgm.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/glyf.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/head.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/hhea.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/hmtx.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/kern.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/loca.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/maxp.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/name.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/nameRecord.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/os2.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/post.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/prep.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/src/FontLib/TrueType/Collection.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/src/FontLib/TrueType/File.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/src/FontLib/TrueType/Header.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/src/FontLib/TrueType/TableDirectoryEntry.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/src/FontLib/WOFF/File.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/src/FontLib/WOFF/Header.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-font-lib/src/FontLib/WOFF/TableDirectoryEntry.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-svg-lib/AUTHORS.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-svg-lib/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-svg-lib/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-svg-lib/composer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-svg-lib/src/Svg/CssLength.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-svg-lib/src/Svg/DefaultStyle.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-svg-lib/src/Svg/Document.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-svg-lib/src/Svg/Gradient/Stop.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-svg-lib/src/Svg/Style.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-svg-lib/src/Svg/Surface/CPdf.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-svg-lib/src/Svg/Surface/SurfaceCpdf.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-svg-lib/src/Svg/Surface/SurfaceInterface.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-svg-lib/src/Svg/Surface/SurfacePDFLib.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-svg-lib/src/Svg/Tag/AbstractTag.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-svg-lib/src/Svg/Tag/Anchor.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-svg-lib/src/Svg/Tag/Circle.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-svg-lib/src/Svg/Tag/ClipPath.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-svg-lib/src/Svg/Tag/Ellipse.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-svg-lib/src/Svg/Tag/Group.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-svg-lib/src/Svg/Tag/Image.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-svg-lib/src/Svg/Tag/Line.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-svg-lib/src/Svg/Tag/LinearGradient.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-svg-lib/src/Svg/Tag/Path.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-svg-lib/src/Svg/Tag/Polygon.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-svg-lib/src/Svg/Tag/Polyline.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-svg-lib/src/Svg/Tag/RadialGradient.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-svg-lib/src/Svg/Tag/Rect.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-svg-lib/src/Svg/Tag/Shape.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-svg-lib/src/Svg/Tag/Stop.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-svg-lib/src/Svg/Tag/StyleTag.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-svg-lib/src/Svg/Tag/Symbol.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-svg-lib/src/Svg/Tag/Text.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/dompdf/php-svg-lib/src/Svg/Tag/UseTag.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/masterminds/html5/CREDITS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/masterminds/html5/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/masterminds/html5/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/masterminds/html5/RELEASE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/masterminds/html5/UPGRADING.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/masterminds/html5/bin/entities.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/masterminds/html5/composer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/masterminds/html5/src/HTML5.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/masterminds/html5/src/HTML5/Elements.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/masterminds/html5/src/HTML5/Entities.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/masterminds/html5/src/HTML5/Exception.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/masterminds/html5/src/HTML5/InstructionProcessor.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/masterminds/html5/src/HTML5/Parser/CharacterReference.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/masterminds/html5/src/HTML5/Parser/DOMTreeBuilder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/masterminds/html5/src/HTML5/Parser/EventHandler.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/masterminds/html5/src/HTML5/Parser/FileInputStream.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/masterminds/html5/src/HTML5/Parser/InputStream.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/masterminds/html5/src/HTML5/Parser/ParseError.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/masterminds/html5/src/HTML5/Parser/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/masterminds/html5/src/HTML5/Parser/Scanner.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/masterminds/html5/src/HTML5/Parser/StringInputStream.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/masterminds/html5/src/HTML5/Parser/Tokenizer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/masterminds/html5/src/HTML5/Parser/TreeBuildingRules.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/masterminds/html5/src/HTML5/Parser/UTF8Utils.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/masterminds/html5/src/HTML5/Serializer/HTML5Entities.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/masterminds/html5/src/HTML5/Serializer/OutputRules.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/masterminds/html5/src/HTML5/Serializer/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/masterminds/html5/src/HTML5/Serializer/RulesInterface.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/masterminds/html5/src/HTML5/Serializer/Traverser.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/sabberworm/php-css-parser/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/sabberworm/php-css-parser/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/sabberworm/php-css-parser/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/sabberworm/php-css-parser/composer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/sabberworm/php-css-parser/src/CSSList/AtRuleBlockList.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/sabberworm/php-css-parser/src/CSSList/CSSBlockList.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/sabberworm/php-css-parser/src/CSSList/CSSList.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/sabberworm/php-css-parser/src/CSSList/Document.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/sabberworm/php-css-parser/src/CSSList/KeyFrame.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/sabberworm/php-css-parser/src/Comment/Comment.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/sabberworm/php-css-parser/src/Comment/Commentable.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/sabberworm/php-css-parser/src/OutputFormat.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/sabberworm/php-css-parser/src/OutputFormatter.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/sabberworm/php-css-parser/src/Parser.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/sabberworm/php-css-parser/src/Parsing/Anchor.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/sabberworm/php-css-parser/src/Parsing/OutputException.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/sabberworm/php-css-parser/src/Parsing/ParserState.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/sabberworm/php-css-parser/src/Parsing/SourceException.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/sabberworm/php-css-parser/src/Parsing/UnexpectedEOFException.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/sabberworm/php-css-parser/src/Parsing/UnexpectedTokenException.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/sabberworm/php-css-parser/src/Property/AtRule.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/sabberworm/php-css-parser/src/Property/CSSNamespace.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/sabberworm/php-css-parser/src/Property/Charset.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/sabberworm/php-css-parser/src/Property/Import.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/sabberworm/php-css-parser/src/Property/KeyframeSelector.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/sabberworm/php-css-parser/src/Property/Selector.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/sabberworm/php-css-parser/src/Renderable.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/sabberworm/php-css-parser/src/Rule/Rule.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/sabberworm/php-css-parser/src/RuleSet/AtRuleSet.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/sabberworm/php-css-parser/src/RuleSet/DeclarationBlock.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/sabberworm/php-css-parser/src/RuleSet/RuleSet.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/sabberworm/php-css-parser/src/Settings.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/sabberworm/php-css-parser/src/Value/CSSFunction.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/sabberworm/php-css-parser/src/Value/CSSString.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/sabberworm/php-css-parser/src/Value/CalcFunction.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/sabberworm/php-css-parser/src/Value/CalcRuleValueList.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/sabberworm/php-css-parser/src/Value/Color.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/sabberworm/php-css-parser/src/Value/LineName.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/sabberworm/php-css-parser/src/Value/PrimitiveValue.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/sabberworm/php-css-parser/src/Value/RuleValueList.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/sabberworm/php-css-parser/src/Value/Size.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/sabberworm/php-css-parser/src/Value/URL.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/sabberworm/php-css-parser/src/Value/Value.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-mysql/vendor/sabberworm/php-css-parser/src/Value/ValueList.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-pdo/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-pdo/.idea/codeception.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-pdo/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-pdo/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-pdo/.idea/php-pdo.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-pdo/.idea/php.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-pdo/.idea/phpspec.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-pdo/.idea/phpunit.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-pdo/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-pdo/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-pdo/alunos-com-telefone.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-pdo/banco.sqlite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-pdo/composer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-pdo/composer.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-pdo/conexao.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-pdo/criar-turma.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-pdo/inserir-aluno.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-pdo/lista-alunos.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-pdo/listar-alunos.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-pdo/projeto-inicial.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-pdo/remover-aluno.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-pdo/src/Domain/Model/Phone.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-pdo/src/Domain/Model/Student.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-pdo/src/Domain/Repository/StudentRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-pdo/src/Infrastructure/Persistence/ConnectionCreator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-pdo/src/Infrastructure/Repository/PdoStudentRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-pdo/vendor/autoload.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-pdo/vendor/composer/ClassLoader.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-pdo/vendor/composer/InstalledVersions.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-pdo/vendor/composer/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-pdo/vendor/composer/autoload_classmap.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-pdo/vendor/composer/autoload_namespaces.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-pdo/vendor/composer/autoload_psr4.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-pdo/vendor/composer/autoload_real.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-pdo/vendor/composer/autoload_static.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-pdo/vendor/composer/installed.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../php-pdo/vendor/composer/installed.php" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution>
+      <executable path="composer" />
+    </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/opt/homebrew/Cellar/php/8.3.9/bin/php">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/composer" />
+    </include_path>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2mJVJNmNzBDYcYN7cGc6uLOnjAE" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;alura&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/baiano/Documents/fontes/programacao/formacao-php/php-mvc-seguranca&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PS-241.18034.69" />
+        <option value="bundled-php-predefined-ba97393d7c68-48a1a656d44e-com.jetbrains.php.sharedIndexes-PS-241.18034.69" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5f0bd218-9fe6-444f-b6d5-212e5b9d7c5f" name="Changes" comment="" />
+      <created>1726794593275</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1726794593275</updated>
+      <workItem from="1726794594374" duration="1535000" />
+      <workItem from="1726802267014" duration="3286000" />
+      <workItem from="1728332124758" duration="332000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
